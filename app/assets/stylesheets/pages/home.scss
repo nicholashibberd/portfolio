@@ -1,0 +1,17 @@
+@import "cms/mixins";
+
+#leader {
+	background: url(../backgrounds/leader.png) repeat-x;		
+ 	@include gradiented(#466380, #263646);
+	color: white;
+	position: relative;
+	h1 { margin-bottom: 10px; }
+	p { color: #eee; }
+	#leader_buttons { 
+		margin-top: 20px; 
+		a { display: block; float: left; margin-right: 20px;}
+	}
+	#leader_left { width: 430px; float: left; margin-right: 10px; padding: 30px }
+	#leader_right { padding: 15px 15px 0 15px; }
+	#latest_work_flag { position: absolute; top: -5px; right: -8px; }
+}

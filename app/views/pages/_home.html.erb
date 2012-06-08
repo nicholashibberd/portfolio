@@ -1,0 +1,17 @@
+<% content_for :strapline do %>
+	...is a freelance <span class="highlighted">web designer</span> and <span class="highlighted">Ruby on Rails developer</span> with years of experience in developing web applications. Based in <span class="highlighted">London, UK</span>
+<% end %>
+<div id="leader">
+	<div id="leader_left">
+		<h1>Sanderstead Parish</h1>
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+		<div id="leader_buttons">
+			<%= link_to 'View project', '/pages/sanderstead_parish', :class => 'btn btn-success' %>
+			<%= link_to 'More information', '/pages/sanderstead_parish', :class => 'btn btn-info' %>
+		</div>
+	</div>
+	<div id="leader_right">
+		<%= image_tag 'sanderstead_parish/leader.png' %>
+	</div>
+	<%= image_tag 'latest_work.png', :id => 'latest_work_flag' %>
+</div>
