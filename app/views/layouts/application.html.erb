@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Portfolio</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body id="portfolio">
+	<div id="background">
+		
+	</div>
+	<div id='wrapper'>
+		<div id="header">
+			<div id="top_nav">
+				<%= render 'layouts/application/top_nav' %>
+			</div>
+			<div id="logo"><%= image_tag 'logo.png' %></div>
+			<div id="leader">
+				<%= yield :leader %>
+			</div>
+		</div>
+		<div id="main_content">
+			<%= yield %>
+		</div>
+	</div>
+	<div id="footer">
+		<div id="footer_wrapper">
+			<%#= render 'layouts/footer' %>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+development:
+  host: localhost
+  database: portfolio_development
+
+test:
+  host: localhost
+  database: portfolio_test
+
+# set these environment variables on your prod server
+production:
+  host: localhost
+  database: portfolio_production
+  # slaves:
+  #   - host: slave1.local
+  #     port: 27018
+  #   - host: slave2.local
+  #     port: 27019

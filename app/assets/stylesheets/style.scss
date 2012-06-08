@@ -1,0 +1,124 @@
+@import "cms/mixins";
+$dark_blue: #263646;
+$light_blue: #D7E8EF;
+
+/***********************************
+Common elements
+***********************************/
+
+a, a:visited {
+	text-decoration: none;
+}
+
+a img {
+	border: none;
+}
+
+.container h1 {
+	margin-bottom: 20px;
+}
+
+h1, h2, h3 {
+	color: #32475C;
+}
+
+#spacer, .spacer {
+	clear: both;
+}
+
+.strong {
+	font-weight: bold;
+}
+
+.hidden {
+	display: none;
+}
+
+/***********************************
+Layout
+***********************************/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body#portfolio {
+	margin: 0;
+	padding: 0;
+	background-color: $light_blue;
+	
+	#background {
+		position: absolute;
+		height: 300px;
+		width: 100%;
+		background: $dark_blue url(backgrounds/header.jpg) no-repeat 50%;
+		z-index: -1;
+	}
+
+	#wrapper {
+		margin: auto;
+		width: 980px;
+		
+		/***********************************
+		Header
+		***********************************/		
+		
+		#header {
+			height: 220px;
+			position: relative;
+			
+			#logo {
+				padding-top: 40px;
+				height: 100px;	
+			}
+
+			#top_nav {
+				position: absolute;
+				top: 45px;
+				right: 0px;
+			}
+
+			#top_nav a {
+				float: left;
+				display: block;
+				font-size: 15px;
+				font-weight: bold;
+				color: white;
+				padding: 10px 15px;	
+				
+			}
+
+			#top_nav a.selected {
+				background: url(backgrounds/gradients/pale_blue_pale_blue.png);		
+		  	@include gradiented(#EDF1F6, #B3C1D7);
+				@include rounded(3px);
+				color: #000;
+				text-shadow: 1px 1px 1px #fff;				
+			}	
+		} /* #header */
+		
+		
+		#main_content {
+			width: 950px;
+			padding: 15px;
+			background: white;
+			height: 200px;
+			@include rounded(5px);
+			@include shadowed(0px 0px 20px $dark_blue);
+		}
+
+		
+	}
+
+	#footer_wrapper {
+		margin: auto;
+		width: 960px;
+	}
+
+	#footer {
+		padding: 20px 100px 40px 100px;
+		margin-top: 20px;
+		text-align: center;
+	}
+				
+}
