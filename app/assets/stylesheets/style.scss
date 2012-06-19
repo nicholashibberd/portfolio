@@ -1,6 +1,5 @@
 @import "cms/mixins";
-$dark_blue: #263646;
-$light_blue: #D7E8EF;
+@import "common";
 
 /***********************************
 Common elements
@@ -64,7 +63,7 @@ body#portfolio {
 		***********************************/		
 		
 		#header {
-			height: 220px;
+			height: 140px;
 			position: relative;
 			
 			#logo {
@@ -95,13 +94,15 @@ body#portfolio {
 				color: #000;
 				text-shadow: 1px 1px 1px #fff;				
 			}	
-			
-			#strapline {
+		} /* #header */
+		
+		#strapline {
+		margin-bottom: 40px;	
+		p	{
 				font-size: 24px; color: $light_blue; line-height: 24pt;
 				span.highlighted { color: white; font-weight: bold}
 			}
-		} /* #header */
-		
+		}
 		
 		#main_content {
 			width: 950px;

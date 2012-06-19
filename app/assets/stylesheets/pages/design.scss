@@ -1,0 +1,24 @@
+@import "cms/mixins";
+@import "common";
+
+body#portfolio {
+	.index_item {
+		background: url(../backgrounds/content_gradient.png) repeat-x;
+	 	@include gradiented(#E0EDF2, #FFF);
+		border: 1px solid #B9DADF;
+		clear: left;
+		margin-bottom: 15px;
+	
+		.index_item_inner { border: 1px solid #fff; min-height: 300px; }
+		h1 { color: $dark_blue;}
+		p { color: #999; }
+		#index_item_buttons { 
+			margin-top: 20px; 
+			a { display: block; float: left; margin-right: 20px;}
+		}
+		.index_item_left { width: 430px; float: left; margin-right: 10px; padding: 30px }
+		.index_item_right { padding: 15px;
+			img { border: 1px solid $light_blue }
+		}
+	}
+}

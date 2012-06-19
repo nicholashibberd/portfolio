@@ -1,11 +1,12 @@
 @import "cms/mixins";
+@import "common";
 
 #leader {
 	background: url(../backgrounds/leader.png) repeat-x;		
  	@include gradiented(#466380, #263646);
 	color: white;
 	position: relative;
-	h1 { margin-bottom: 10px; }
+	h1 { color: white;}
 	p { color: #eee; }
 	#leader_buttons { 
 		margin-top: 20px; 
@@ -14,4 +15,28 @@
 	#leader_left { width: 430px; float: left; margin-right: 10px; padding: 30px }
 	#leader_right { padding: 15px 15px 0 15px; }
 	#latest_work_flag { position: absolute; top: -5px; right: -8px; }
+}
+
+#middle_section {
+	background: url(../backgrounds/content_gradient.png) repeat-x;			
+	padding: 30px 15px 20px;
+	#middle_section_left { float: left; width: 450px; }
+	#middle_section_right { @include gradiented(white, $light_blue); margin-left: 500px; padding: 0 20px 20px; }
+}
+
+.field {
+	input[type=text] { height: 25px; width: 320px; border: 1px solid #aaa; }
+	textarea { height: 150px; width: 370px; border: 1px solid #aaa; }
+}
+
+#features {
+	padding: 15px;
+	.feature { 
+		width: 290px;
+		float: left;
+		margin-right: 15px;
+		.feature_image { height: 220px;}
+		h3 { margin-top: 10px; }
+	 }
+		
 }

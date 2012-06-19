@@ -1,0 +1,25 @@
+@import "cms/mixins";
+@import "common";
+
+body#portfolio {
+	#profile {
+		position: relative;
+		
+	  #profile_left {
+			width: 600px;
+			padding: 15px;
+			
+			.image_widget { border: 1px solid $light_blue; padding: 15px; margin-bottom: 30px; }		
+			p {margin-bottom: 30px}
+			
+		}
+		#profile_right {
+			background: $light_blue;
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 280px;
+			padding: 15px;
+		}
+	}
+}

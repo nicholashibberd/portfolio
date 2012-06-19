@@ -1,0 +1,17 @@
+<%#= render "pages/#{@page.slug}" %>
+<div id="strapline">
+	<%= render_region('strapline') %>
+</div>
+
+<div id="main_content">
+	<div id="profile">
+		<div id="profile_left">
+			<%#= yield :profile_left %>
+			<%= render_region('profile_left') %>
+		</div>
+		<div id="profile_right">
+			<%#= yield :profile_right %>
+			<%= render_region('profile_right') %>
+		</div>
+	</div>
+</div>
