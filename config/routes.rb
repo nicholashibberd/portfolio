@@ -1,5 +1,7 @@
 Portfolio::Application.routes.draw do
   mount Cms::Engine => "/cms"
+  resources :messages, :only => [:create]
+  match '/pages/home' => redirect('/')
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

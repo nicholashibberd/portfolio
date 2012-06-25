@@ -1,0 +1,22 @@
+<%= form_for Message.new do |f| %>
+	<%= hidden_field_tag :page_id, @page.slug %>
+	<div class="field">
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</div>
+	<div class="field">
+		<%= f.label :email %>
+		<%= f.text_field :email %>
+	</div>
+	<div class="field">
+		<%= f.label :phone_number %>
+		<%= f.text_field :phone %>
+	</div>
+	<div class="field">
+		<%= f.label :message %>
+		<%= f.text_area :message %>
+	</div>
+	<div class="field">
+		<%= submit_tag 'Send message', :class => 'btn btn-success' %>
+	</div>
+<% end %>

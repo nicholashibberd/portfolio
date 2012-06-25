@@ -1,0 +1,20 @@
+@import "cms/mixins";
+@import "common";
+
+.about_section {
+	clear: both;
+	margin-bottom: 30px;
+	
+}
+.about_section_left {
+	float: left;
+	width: 500px;
+}
+
+.about_section_right {
+	margin-left: 550px;
+	background: url(../backgrounds/content_gradient.png) repeat-x;
+ 	@include gradiented(#E0EDF2, #FFF);
+	border: 1px solid #B9DADF;
+	padding: 15px;
+}

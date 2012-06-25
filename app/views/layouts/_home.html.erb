@@ -6,7 +6,8 @@
 	<div id="leader">
 		<div id="leader_left">
 			<h1>Sanderstead Parish</h1>
-			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+			<p>The Sanderstead Parish of four churches wanted a site that would showcase the best attributes of their community with large pictures and an easy website to update.</p>
+			<p>It needed to showcase the 4 churches of the parish individually, while still maintaining a sense that the churches are part of one family.</p>
 			<div id="leader_buttons">
 				<%= link_to 'View project', '/pages/sanderstead_parish', :class => 'btn btn-success' %>
 				<%= link_to 'More information', '/pages/sanderstead_parish', :class => 'btn btn-info' %>
@@ -29,27 +30,7 @@
 		</div>
 		<div id="middle_section_right">
 			<h2>Get in touch</h2>
-			<%= form_tag '/contact_form' do %>
-				<div class="field">
-					<%= label_tag 'Name' %>
-					<%= text_field_tag "contact[name]" %>
-				</div>
-				<div class="field">
-					<%= label_tag 'Email' %>
-					<%= text_field_tag "contact[email]" %>
-				</div>
-				<div class="field">
-					<%= label_tag 'Phone number' %>
-					<%= text_field_tag "contact[phone_number]" %>
-				</div>
-				<div class="field">
-					<%= label_tag 'Message' %>
-					<%= text_area_tag "contact[message]" %>
-				</div>
-				<div class="field">
-					<%= submit_tag 'Send message', :class => 'btn btn-success' %>
-				</div>
-			<% end %>
+			<%= render 'layouts/contact_form' %>
 		</div>
 	</div>
 	<div id="features">
@@ -58,22 +39,27 @@
 			<div class="feature_image">
 				<%= image_tag 'features/yourgolftravel_feature.png' %>
 			</div>
-			<h3>YourGolfTravel.com</h3>
-			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+			<h3><%= link_to 'YourGolfTravel.com', 'pages/your-golf-travel' %></h3>
+			<p>YourGolfTravel is the largest golf holidays company in Europe and I have worked in both their design and development teams for a number of years.</p>
+			<%= link_to 'View project', '/pages/your-golf-travel', :class => 'btn btn-success' %>
 		</div>
 		<div class="feature" id="feature2">
 			<div class="feature_image">		
 				<%= image_tag 'features/yourgolftours_feature.png' %>
 			</div>
-			<h3>YourGolfTours.com</h3>
-			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+			<h3><%= link_to 'YourGolfTours.com', 'pages/your-golf-tours' %></h3>
+			<p>YourGolfTours is a site that is directed at the lucrative mainly American market of golf tourists looking for a trip of a lifetime to the golfing heartlands of the UK.</p>
+			<p> The holidays can run into thousands of pounds, so the brief was to create something that not only showcased the attractiveness of the product but also conveyed the professionalism of the company.</p>
+			<%= link_to 'View project', '/pages/your-golf-tours', :class => 'btn btn-success' %>
 		</div>
 		<div class="feature" id="feature3">
 			<div class="feature_image">		
 				<%= image_tag 'features/spabreaks_feature.png' %>
 			</div>
-			<h3>Spabreaks.com</h3>
-			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+			<h3><%= link_to 'Spabreaks.com', 'pages/spabreaks' %></h3>
+			<p>While working at the Palatinate Group I was the lead designer for Spabreaks.com and I also project managed the development of the site in co-ordination with the Rails agency New Bamboo.</p>
+			<p>I was responsible not only for designing the aesthetic, but also structuring the layout of the site</p>
+			<%= link_to 'View project', '/pages/spabreaks', :class => 'btn btn-success' %>
 		</div>
 		<div class="spacer"></div>
 	</div>
