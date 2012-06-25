@@ -1,5 +1,6 @@
-PATH
-  remote: ../simple_cms
+GIT
+  remote: git://github.com/nicholashibberd/simple_cms.git
+  revision: 36bde9a64b78f068862838322b6ac1904c6f691c
   specs:
     cms (0.0.1)
       bson_ext

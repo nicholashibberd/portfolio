@@ -2,8 +2,8 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.0'
 gem 'mongoid'
-#gem "cms", :git => "git://github.com/nicholashibberd/simple_cms.git"
-gem "cms", :path => "../simple_cms"
+gem "cms", :git => "git://github.com/nicholashibberd/simple_cms.git"
+#gem "cms", :path => "../simple_cms"
 
 gem 'json'
 gem 'capistrano'
