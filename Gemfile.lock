@@ -1,6 +1,7 @@
 GIT
   remote: git://github.com/nicholashibberd/simple_cms.git
-  revision: 36bde9a64b78f068862838322b6ac1904c6f691c
+  revision: 0671ce9b864f66e93fb645443996851cb45ec047
+  ref: 0671ce9b86
   specs:
     cms (0.0.1)
       bson_ext
