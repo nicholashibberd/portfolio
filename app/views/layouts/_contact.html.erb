@@ -1,8 +1,12 @@
 <div id="strapline">
-	<p>Please fill out the form to <span class="highlighted">get in touch.</span>. I'll be sure to respond <span class="highlighted">as soon as possible!</span></p>
+	<% if flash[:notice] %>
+		<p><span class="highlighted"><%= flash[:notice] %></span></p>
+	<% else %>
+		<p>Please fill out the form to <span class="highlighted">get in touch.</span>. I'll be sure to respond <span class="highlighted">as soon as possible!</span></p>
+	<% end %>
 </div>
 
-<div id="main_content">
+<div id="main_content" class="narrow">
 	<h1>Contact me</h1>
 	<%= render 'layouts/contact_form' %>
 </div>

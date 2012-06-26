@@ -1,5 +1,9 @@
 <div id="strapline">
-	<p>...is a freelance <span class="highlighted">web designer</span> and <span class="highlighted">Ruby on Rails developer</span> with years of experience of developing web applications. Based in <span class="highlighted">London, UK</span></p>
+	<% if flash[:notice] %>
+		<p><span class="highlighted"><%= flash[:notice] %></span></p>
+	<% else %>
+		<p>...is a freelance <span class="highlighted">web designer</span> and <span class="highlighted">Ruby on Rails developer</span> with years of experience of developing web applications. Based in <span class="highlighted">London, UK</span></p>
+	<% end %>
 </div>
 
 <div id="main_content">
@@ -14,7 +18,7 @@
 			</div>
 		</div>
 		<div id="leader_right">
-			<%= image_tag 'sanderstead_parish/leader.png' %>
+			<%= image_tag 'sanderstead_parish_leader.png' %>
 		</div>
 		<%= image_tag 'latest_work.png', :id => 'latest_work_flag' %>
 	</div>
@@ -22,11 +26,9 @@
 	<div id="middle_section">
 		<div id="middle_section_left">
 			<h2>About me</h2>
-			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-			<h3>Rails development as a hobby</h3>
-			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+			<p>Hi, thanks for visiting my site! I'm a web designer and developer from London, aged 30. I work for a travel company called The Palatinate Group whose major websites include YourGolfTravel.com and Spabreaks.com. I have worked in many different areas of the business, and have been involved in the development of web applications from both a technical and a client-side perspective.</p>
+			<p> I have been a full-time Ruby on Rails developer for the past two years, but have also held roles as a web-designer and project manager with several big web projects to my name. I have also worked in online marketing and web performance analysis.</p>
+			<p>Outside of work I have developed my own CMS which I use to run a number of websites (including this one!), such as that of my <%= link_to 'local parish of churches', 'http://www.sanderstead-parish.rg.uk' %>. Check out my <%= link_to 'github account', 'https://github.com/nicholashibberd' %> for my coding history.</p>
 		</div>
 		<div id="middle_section_right">
 			<h2>Get in touch</h2>
@@ -37,15 +39,15 @@
 		<h2> Other recent projects</h2>
 		<div class="feature" id="feature1">
 			<div class="feature_image">
-				<%= image_tag 'features/yourgolftravel_feature.png' %>
+				<%= link_to (image_tag 'yourgolftravel_feature.png'), '/pages/your-golf-travel' %>
 			</div>
 			<h3><%= link_to 'YourGolfTravel.com', 'pages/your-golf-travel' %></h3>
-			<p>YourGolfTravel is the largest golf holidays company in Europe and I have worked in both their design and development teams for a number of years.</p>
+			<p>YourGolfTravel is the largest golf holidays company in Europe and I have worked in both their design and development teams for a number of years, during which time they have grown from an operation of 10 people, to a thriving business of over 120!</p>
 			<%= link_to 'View project', '/pages/your-golf-travel', :class => 'btn btn-success' %>
 		</div>
 		<div class="feature" id="feature2">
 			<div class="feature_image">		
-				<%= image_tag 'features/yourgolftours_feature.png' %>
+				<%= link_to (image_tag 'yourgolftours_feature.png'), '/pages/your-golf-tours' %>
 			</div>
 			<h3><%= link_to 'YourGolfTours.com', 'pages/your-golf-tours' %></h3>
 			<p>YourGolfTours is a site that is directed at the lucrative mainly American market of golf tourists looking for a trip of a lifetime to the golfing heartlands of the UK.</p>
@@ -54,7 +56,7 @@
 		</div>
 		<div class="feature" id="feature3">
 			<div class="feature_image">		
-				<%= image_tag 'features/spabreaks_feature.png' %>
+				<%= link_to (image_tag 'spabreaks_feature.png'), '/pages/spabreaks' %>
 			</div>
 			<h3><%= link_to 'Spabreaks.com', 'pages/spabreaks' %></h3>
 			<p>While working at the Palatinate Group I was the lead designer for Spabreaks.com and I also project managed the development of the site in co-ordination with the Rails agency New Bamboo.</p>
